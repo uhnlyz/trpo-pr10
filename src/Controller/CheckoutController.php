@@ -7,9 +7,7 @@ final class CheckoutController
     {
         $errors=$_SESSION['checkout_errors']??[];$old=$_SESSION['checkout_old']??[];
         unset($_SESSION['checkout_errors'],$_SESSION['checkout_old']);
-        $deliveryPrice=0;
-        foreach($this->deliveryMethods as $method)if(($method['id']??'')===($old['delivery']??''))$deliveryPrice=(int)($method['price']??0);
-        return ['title'=>'Оформление заказа','empty'=>$this->cart->lines()===[],'deliveryMethods'=>$this->deliveryMethods,'errors'=>$errors,'old'=>$old,'lines'=>$this->cart->lines(),'total'=>$this->cart->total(),'deliveryPrice'=>$deliveryPrice];
+        return ['title'=>'Оформление заказа','empty'=>$this->cart->lines()===[],'deliveryMethods'=>$this->deliveryMethods,'errors'=>$errors,'old'=>$old,'lines'=>$this->cart->lines(),'total'=>$this->cart->total()];
     }
     public function submit(): void
     {
