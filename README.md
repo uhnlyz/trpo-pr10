@@ -4,7 +4,7 @@
 Добавлен checkout-сценарий: GET /checkout показывает форму, POST /checkout проверяет поля, создаёт OrderData, сохраняет заказ в JSON, очищает корзину и перенаправляет на подтверждение.
 
 ## Запуск
-PHP 8.0+: `php -S localhost:8000 -t public`.
+PHP 8.1+: `php -S localhost:8000 -t public`.
 
 ## Проверка
 Проверьте пустую форму, неверный email, пустое имя, неизвестный способ доставки и корректный заказ. Доступные способы читаются из dataset/delivery_methods.json. Набор сценариев — dataset/order_cases.json. Заказы сохраняются в data/orders.json.
