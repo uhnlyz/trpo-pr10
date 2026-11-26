@@ -1,0 +1,8 @@
+method,path,controller,action
+GET,/,HomeController,index
+GET,/catalog,CatalogController,index
+GET,/product,CatalogController,show
+GET,/cart,CartController,index
+POST,/cart/add,CartController,add
+POST,/cart/update,CartController,update
+POST,/cart/remove,CartController,remove
